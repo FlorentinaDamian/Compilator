@@ -1,0 +1,85 @@
+
+class A{ 
+    int x;
+    int y;
+    float z;
+    void A() {
+       self.x = 19;
+       y = 90;
+    }
+    
+    int g(int z) {
+       return z * 100;
+    }
+    
+    float fl(int x) {
+      if(x == 20) {
+         return 10.0;
+      }
+      return 20.0;
+    }
+    };
+    
+    int f (int z, float x, bool b){                    
+    if (b == True and x > 1.0){
+        return z * 10;
+    } 
+    return z;
+    }
+    
+    class B{  
+    int b;
+    int bb;
+    void B() {
+       self.b = 5;
+       self.bb = 10; 
+    }
+    
+    int g(int z) {
+        return z + b;
+    }
+    
+    int f(int z) {
+          if(z > 4) {
+          }
+          return b + bb * z;
+    }
+    };
+    
+    
+    string bfunc(bool b, string s){
+        if( b == True ) {
+           return s; 
+        }
+        else {return "bau";}
+    }
+    
+    float fx;
+    int x;
+    int z;
+    string s;
+    int ix;
+    bool b1,b2;
+    B obb; A oba; 
+    
+    main {       
+           fx = 65.0;
+           ix = 10;
+           s = "test";
+           b1 = True;
+           b2 = b1;
+           oba = new A();
+           obb = new B();
+           oba.g(fx);
+           oba.x = oba.x + oba.fl(ix);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

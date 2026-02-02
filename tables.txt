@@ -1,0 +1,63 @@
+SCOPE: global
+  Variabile:
+    bool b1 = true
+    bool b2 = true
+    float fx = 650.000000
+    int ix = 30
+    A oba = 0
+    B obb = 0
+    string s = "otherstr"
+  Functii:
+    string bfunc(bool b string s ) [Defined]
+    int f(int z ) [Defined]
+  Clase:
+    A
+    B
+---------------------------------
+SCOPE: A  [PARENT: global]
+  Variabile:
+    int x = 0
+    int y = 0
+  Functii:
+    void A() [Defined]
+    int g(int z ) [Defined]
+---------------------------------
+SCOPE: A  [PARENT: A]
+---------------------------------
+SCOPE: g  [PARENT: A]
+  Variabile:
+    int z = 0
+---------------------------------
+SCOPE: f  [PARENT: global]
+  Variabile:
+    int b = 0
+    bool flag = false
+    int x = 0
+    int z = 0
+---------------------------------
+SCOPE: B  [PARENT: global]
+  Variabile:
+    int b = 0
+    int bb = 0
+  Functii:
+    void B() [Defined]
+    int f(int z ) [Defined]
+    int g(int z ) [Defined]
+---------------------------------
+SCOPE: B  [PARENT: B]
+---------------------------------
+SCOPE: g  [PARENT: B]
+  Variabile:
+    A a = null
+    int x = 0
+    int z = 0
+---------------------------------
+SCOPE: f  [PARENT: B]
+  Variabile:
+    int z = 0
+---------------------------------
+SCOPE: bfunc  [PARENT: global]
+  Variabile:
+    bool b = false
+    string s = null
+---------------------------------

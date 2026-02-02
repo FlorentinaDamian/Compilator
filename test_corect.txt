@@ -1,0 +1,75 @@
+class A { 
+int x;
+int y;
+void A() {
+   self.x = 19;
+   self.y = 90;
+}
+int g(int z) {
+   return z + 100;
+}
+};
+int f(int z) {                    
+ int x; int b;
+ x = 5; b = 10;
+ bool flag = True;
+ print(flag);
+ if(flag == True) {    
+        return x + b;                      
+        }	
+ return z * 10;
+}
+class B { 
+int b;
+int bb;
+void B() {
+   self.b = 5;
+   self.bb = 10; 
+}
+int g(int z) {
+   A a; int x;
+   a = new A(); x = 100; 
+   return x  + a.x + z;
+}
+int f(int z) {
+      return 200 * z;
+}
+};
+string bfunc(bool b, string s){
+    if( b == False ) {
+       return s; 
+    }
+    else { return "bau";}
+}
+float fx;
+string s;
+int ix;
+bool b1,b2;
+B obb; A oba; 
+main{      
+    fx = 65.0;
+    fx = fx + 10.0 * fx - 65.0;
+    print(fx);
+    s = "test";
+    print(s);
+    s = "otherstr";
+    print(s);
+    oba = new A();
+    obb = new B();
+    ix = 10;
+    ix = ix + (ix + f(ix*4))*2 + oba.x * oba.y + oba.f(10) + obb.b * obb.bb ;  
+    print(ix);
+    oba.x = f(1000);
+    oba.y = f(100);
+    b2 = True;
+    b1=(b2 or !b2);
+    print(bfunc(b1, "s"));
+    print(f(ix) + 5 > 5 + obb.b);
+    print(ix+5 > ix+6);
+    print(b1 == False); 
+    print(oba.x == oba.y);
+    print(ix+5 > ix+6 or (b1 == False and f(ix) + 5 > 5 + obb.b) or oba.x == oba.y);
+    if(ix+2 > ix + 5 and ix + 3 > f(45*3) - 10) {
+        ix = 100;
+    }
+}

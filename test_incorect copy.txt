@@ -1,0 +1,104 @@
+
+class A{ 
+    int x;
+    int y;
+    float z;
+    void A() {
+       self.x = 19;
+       y = 90;
+    }
+    
+    int g(int z) {
+       return z * 100;
+    }
+    
+    float fl(int x) {
+      if(x == 20) {
+         return 10.0;
+      }
+      return 20.0;
+    }
+    };
+    
+    int f (int z, float x, bool b){                    
+    if (b == true and x > 1.0){
+        return z * 10;
+    } 
+    return z;
+    }
+    
+    class B{  
+    int b;
+    int bb;
+    void B() {
+       self.b = 5;
+       self.bb = 10; 
+    }
+    
+    int g(int z) {
+        return z + b;
+    }
+    
+    int f(int z) {
+          if(z > 4) {
+               int var;=>greseala
+               var = 0;
+               return var+5;
+          }
+          return b + bb * z;
+    }
+    };
+    
+    
+    string bfunc(bool b, string s){
+        if( b == true ) {
+           return s; 
+        }
+        else {return "bau";}
+    }
+    
+    float fx;
+    int x;
+    int z;
+    string s;
+    int ix;
+    int ix;=>redefinita
+    bool b1,b2;
+    B obb; A oba; 
+    
+    main {       
+           zzz = 10;=>nedefinit
+    
+           fx = 65.0;
+           ix = 10;
+    Print(fx - 65.0 + f(10,10.0,True) );=>ea vrea ca functiile sa returneze imiplicit 0, sa nu ne chinuim sa facem arborele
+           fx = fx *10 + f(10,10.0,True) + ix; =>aici eroare, fx,10 sunt tipuri diferite
+    s = “test”;
+    b1 = True;
+    b2 = b1;
+    Print(s + b1);=>eroare, s e string, b1 e bool
+    b1 = b1 + b2;=>eroare, nu poti bool+bool
+    fx = b1 or b2;=>eroare, fx e float, b1 or b2 e bool
+    oba = new A();
+    obb = new B();
+    oba.x = oba.b + bfunc(b1,s);=>asta merge dupa exemplul ei, cum functiile returneaza 0
+    oba.x = obb.b + fx;=> eroare, float+int
+    
+    Print(f(ix,fx,fx));=> functie nedefinita, nu respecta int,float,bool
+    Print(f(ix,fx,True,True));=> nr incorect de argumente
+    
+           oba.f(ix);=>nr incorect de argumente
+           oba.g(fx);=>corect
+           oba.zzz = 100;=>eroare, nu stie cine e zzz
+           oba.x = oba.x + oba.fl(ix);=>ar trebui sa fie corect, pentru ca fl(ix)=0
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
